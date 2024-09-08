@@ -11,6 +11,6 @@ Resources:
      Properties:
       DBInstanceClass: db.t2.micro
       Engine: MySQL
-      MasterUsername: MyName
+      MasterUsername: MyDatabase
       MasterUserPassword: MyPassword123
       
