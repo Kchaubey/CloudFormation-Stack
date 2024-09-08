@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Deploy ec2 Instance
+Resources: 
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+     InstanceType: t2.micro
+    DependsOn: MyDB
+  MyDB:
+     Type: AWS::RDS::DBInstance
+     Properties:
+      DBInstanceClass: db.t2.micro
+      Engine: MySQL
+      MasterUsername: MyName
+      MasterUserPassword: MyPassword123
+      
