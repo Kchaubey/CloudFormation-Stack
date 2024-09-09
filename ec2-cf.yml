@@ -1,7 +1,13 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Deploy ec2 Instance
+Description: Deploy EC2 Instance
+
 Resources: 
   Ec2Instance:
     Type: AWS::EC2::Instance
     Properties:
-     InstanceType: t2.micro
+      InstanceType: t2.micro
+      ImageId: ami-0a5c3558529277641 # Replace this with the appropriate AMI ID for your region
+      KeyName: DEVOPS           # Replace with your actual key pair name
+      SecurityGroupIds:
+        - sg-03b2cb3e45ab2dd34      # Replace with your security group ID
+      SubnetId: subnet-0a2c10cfc9cf13c4a  # Replace with your subnet ID
