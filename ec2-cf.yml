@@ -5,12 +5,3 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
      InstanceType: t2.micro
-    DependsOn: MyDB
-  MyDB:
-     Type: AWS::RDS::DBInstance
-     Properties:
-      DBInstanceClass: db.t2.micro
-      Engine: MySQL
-      MasterUsername: MyDatabase
-      MasterUserPassword: MyPassword123
-      
